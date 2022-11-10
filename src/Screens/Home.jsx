@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import {  Box,Center,Container, Pressable } from "native-base";
+import {  Box,Center,Container, Pressable, useColorModeValue } from "native-base";
 import {Dimensions,Text} from 'react-native'
 import Color from '../components/Color'
 export default function Home() {
   const [count,setCount]=useState(0)
+  const bg = useColorModeValue("warmGray.50", "coolGray.800");
   return (
-    <Center height={Dimensions.get('window').height}>
+    <Center bg={bg} height={Dimensions.get('screen').height}>
       <Container>
         <Text style={{fontSize:24,fontWeight:'bold'}}>
           A component library for the

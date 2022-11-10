@@ -8,11 +8,12 @@ export default function Color() {
     toggleColorMode
   } = useColorMode()
   const bg = useColorModeValue("warmGray.50", "coolGray.800");
+  const c=useColorModeValue('#000','#fff')
   return (
     <Box>
       <Pressable alignSelf='center' mt={50}>
         <Box bg={bg} alignSelf="center" alignItems="center" rounded='xl' size="24" safeArea>
-          <Text style={{fontSize:20,fontWeight:'bold'}}>{colorMode==='light'?"Lgint":"Dark"}</Text>
+          <Text style={{fontSize:20,fontWeight:'bold',color:c}}>{colorMode==='light'?"Lgint":"Dark"}</Text>
         </Box>
       </Pressable>
       <Button mt={10} onPress={()=>{toggleColorMode()}} w={200} alignSelf='center' h={10}>
